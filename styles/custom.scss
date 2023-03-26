@@ -1,0 +1,31 @@
+@import "../node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/mixins";
+
+$brand-color: #F7AB0A;
+
+$theme-colors: map-merge($theme-colors, ("brand-color": $brand-color));
+
+.underline {
+	text-decoration-line: underline;
+	text-decoration-style: solid;
+	text-decoration-color: $brand-color;
+	text-decoration-thickness: 2px;
+}
+
+.post_card {
+	cursor: pointer;
+	height: 20rem;
+	overflow: hidden;
+
+	&__image {
+		transform-origin: 65% 75%;
+		transition: transform 1s, filter .5s ease-out;
+	}
+
+	&:hover &__image {
+		transform: scale(1.5);
+	}
+}
+
+@import "../node_modules/bootstrap/scss/bootstrap";
